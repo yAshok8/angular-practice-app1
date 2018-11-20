@@ -1,0 +1,8 @@
+<div class="row">
+  <div class="col-md-12 emp-component">
+    <label> Show :</label>
+    <label><input type="radio" value="All" name="options" [(ngModel)]='selectedRadioButtonVal' (change)="radioButtonChangedEventFunction()"><span>All ({{ all }})</span></label>
+    <label><input type="radio" value="Male" name="options" [(ngModel)]='selectedRadioButtonVal' (change)="radioButtonChangedEventFunction()"><span>Mens ({{ mens }})</span></label>
+    <label><input type="radio" value="Female" name="options" [(ngModel)]='selectedRadioButtonVal' (change)="radioButtonChangedEventFunction()"><span>Womens ({{ womens }})</span></label>
+  </div>
+</div>

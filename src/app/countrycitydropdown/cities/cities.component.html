@@ -1,0 +1,9 @@
+<div class="form-group">
+    <label for="cities"><b>Select City from {{selectedCountry}}</b></label>
+    <select class="form-control" id="cities">
+      <ng-container *ngFor="let city of cities;">
+        <option value="{{ city }}">{{ city }}</option>
+      </ng-container>
+  </select>
+</div>
+

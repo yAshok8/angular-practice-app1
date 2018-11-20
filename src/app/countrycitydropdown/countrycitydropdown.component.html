@@ -1,0 +1,11 @@
+<h3>Nested Component Lab</h3>
+<hr>
+<div class="form-group">
+  <label for="country"><b>Select Country : </b></label>
+  <select class="form-control" id="country" [(ngModel)]='currentCountry' (change)="getCountryCities($event)" >
+    <ng-container *ngFor="let country of countryNames">
+      <option value="{{ country }}">{{ country }}</option>
+    </ng-container>
+  </select>
+</div>
+<app-cities [cities]='cityNames' [selectedCountry]='currentCountry' ></app-cities>

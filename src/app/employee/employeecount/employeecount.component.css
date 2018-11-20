@@ -1,0 +1,8 @@
+.emp-component{
+    font-weight: bold;
+    font-size: 17px;
+}
+
+div > label{
+    margin: 5px;
+}

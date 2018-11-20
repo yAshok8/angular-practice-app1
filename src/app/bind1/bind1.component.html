@@ -1,0 +1,42 @@
+
+<div class="row">
+    <div class="col-md-6 element">
+      <h3>Class Binding</h3>
+      <button [class]="btnClass">My Button</button>
+      <!-- booleanClassVariable is a boolean variable defined in component class. If its value is true then colorClass will be applied 
+      on the element. -->
+      <button class="bold-class" [class.colorClass]="booleanClassVariable">My Button 1</button>
+      <button class="bold-class italic-class colorClass" [class.bold-class]="!booleanClassVariable">My Button 2</button>
+      <button class="colorClass" [ngClass]="addClasses()">My Button 3</button>
+    </div>
+    <div class=" col-md-6 element">
+      <h3>Style Binding</h3>
+      <button [style.font-weight]="isFontBold ? 'bold' : 'normal'">My Button 1</button>
+      <button [style.font-size.px]="fontSize">My Button 2</button>
+      <button [ngStyle]="addStyleClasses()">My Button 3</button>
+    </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6 element">
+    <h3>Event Binding</h3>
+    <table border="2">
+      <thead><th colspan="2">Employee Details</th></thead>
+      <tbody>
+        <tr><td>Name</td><td>Ashok Yadav</td></tr>
+        <tr><td>Company</td><td>Citius Tech</td></tr>
+        <tr *ngIf="hideTr"><td>Address</td><td>Dahisar</td></tr>
+        <tr *ngIf="hideTr"><td>Blood Group</td><td>B+</td></tr>
+      </tbody>
+    </table>
+    <br>
+    <button class="btn btn-primary btn-sm" on-click="btnEvent()">{{ hideTr? 'Hide' : 'Show' }} Details</button>
+  </div>
+
+  <div class="col-md-6 element">
+    <h3>Two way data binding</h3><hr>  
+    <input type="text" [(ngModel)]='name' class="form-control" placeholder="Write something here">
+    <br>
+    <h4>You entered : {{name}}</h4>
+  </div>
+</div>
